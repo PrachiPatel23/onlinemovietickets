@@ -1,0 +1,102 @@
+.maindetails{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color:  transparent;
+}
+.background {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+    filter: brightness(0.3);
+}
+
+.poster1{
+    flex:0 0 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.imageposter{
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(137, 137, 137, 0.24) 0px 3px 8px;
+}
+.details{
+    flex: auto;
+    padding: 10px;
+}
+.moviename{
+    color: #F9F9F9;
+    font-size:50px;
+}
+.language,.rating , .timelineandactions h3{
+    color: black;
+    font-weight: 500;
+    font-size: larger;
+}
+.rating{
+    width: 30%;
+    border: 1px solid #E0E0E0;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #E8E8E8;
+}
+.language{
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #E8E8E8;
+    color: #313131;
+}
+
+.timelineandactions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.timelineandactions h3{
+    color: white;
+}
+
+.booktickets{
+    width: 35%;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #6E56CF;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    &:hover{
+        background-color: #654DC4;
+        color: #FCFCFC;
+    }
+}
+
+.aboutmovie{
+    margin: 70px;
+    margin-bottom: 5px;
+    width: 60%;
+}
+
+.plot,.cast{
+    border-bottom: 1px solid #D4CAFE;
+}
+.aboutmovietxt{
+    color: #313131;
+    padding: 10px;
+    font-family: helvetica,Roboto;
+}
+.movieplot{
+    font-weight: 500;
+    font-family: helvetica,Roboto;
+    color: #4b4b4b;
+    padding: 5px;
+}

@@ -1,0 +1,56 @@
+
+
+  .moviesText{
+    margin-left: 60px;
+    color: #565656;
+    font-weight: 700;
+    font-family:Helvetica, sans-serif;
+  }
+  
+  .suggestionUL {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .suggestionsli {
+    background-color: #FCFCFC;
+    border: 1px solid #D4CAFE;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.5s ease;
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+  
+  .movieheader {
+    color: #6E56CF;
+    margin-bottom: 5px;
+    font-size: large;
+  }
+  
+  .genre {
+    color: #60646C;
+    margin-bottom: 10px;
+    font-family: monospace;
+  }
+  
+  .imdbrating {
+    color: #60646C;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .poster {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+  }
+  

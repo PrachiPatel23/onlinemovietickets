@@ -1,0 +1,130 @@
+.appHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FCFCFC;
+    padding: 10px 20px;
+    border-bottom: 1px solid #D4CAFE;
+  }
+  
+  .leftSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .leftContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #654DC4;
+    margin-right: 50px;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  .button {
+    margin-right: 10px;
+    background-color: transparent;
+    color: #898989;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: medium;
+    cursor: pointer;
+    &:hover{
+      color: #654DC4;
+    }
+  }
+  
+  .rightSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .rightContent {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D4CAFE;
+    border-radius: 10px;
+    padding: 8px;
+  }
+  
+  .searchBar {
+    padding: 8px;
+    margin-right: 10px;
+    outline: none;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .searchIcon {
+    color: #6E56CF;
+    cursor: pointer;
+  }
+  
+  .loginButton {
+    border:1px solid #654DC4;
+    color: #654DC4;
+    background-color: #FCFCFC;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: medium;
+  }
+  
+  .user{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    z-index: 10;
+    border: 1px solid #D4CAFE;
+    padding: 5px;
+    background-color: #FCFCFC;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .userDis{
+    display: none;
+  }
+  .emailaddress{
+    font-size: large;
+    font-weight: 500;
+    margin: 10px;
+    margin-right: 25px;
+  }
+
+  .user h2{
+    font-size: medium;
+    font-weight: 500;
+  }
+  #logout{
+    color: rgb(182, 1, 1);
+    cursor: pointer;
+  }
+
+  .divider{
+    border-top: 1px solid #c2c2c2;
+    width: 100%;
+  }

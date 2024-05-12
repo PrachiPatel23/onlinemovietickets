@@ -1,0 +1,89 @@
+.loginContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D4CAFE;
+    border-radius: 8px;
+    padding: 30px;
+    width: 350px;
+    height: 50vh;
+    background-color: #FCFCFC;
+  }
+  
+  .appName {
+    margin-bottom: 10px;
+    color: #654DC4;
+    font-size: larger;
+  }
+  
+  .loginText {
+    margin-top: 10px;
+    font-weight: 300;
+    color: #654DC4;
+  }
+  .loginForm{
+    width: 100%;
+  }
+  .loginFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D4CAFE;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; 
+    background-color: #FCFCFC;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #D4CAFE;
+    border-radius: 4px;
+    margin: 0 auto;
+    outline: none;
+  }
+  
+  .signInButton {
+    background-color: #654DC4; 
+    color: #FCFCFC; 
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; 
+    margin-bottom: 15px;
+  }
+  
+  .signupButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .signupButton1{
+    background:none;
+    border: none;
+    color: #654DC4; 
+    cursor: pointer;
+  }
+  
