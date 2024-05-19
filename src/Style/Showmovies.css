@@ -17,11 +17,12 @@
     flex:0 0 30%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    align-items: center;
 }
 .imageposter{
     width: 300px;
     border-radius: 10px;
+    margin: 10px 0px 10px 0px;
     box-shadow: rgba(137, 137, 137, 0.24) 0px 3px 8px;
 }
 .details{

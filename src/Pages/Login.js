@@ -8,7 +8,7 @@ export default function Login() {
     const navigate =useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [error, setError] = useState(null);
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -24,6 +24,8 @@ export default function Login() {
     e.preventDefault();
    await signInWithEmailAndPassword(auth,email,password).then((userCred)=>{
     console.log("SignIn Successfull");
+   }).catch((error)=>{
+    setError('Invalid Email or Password !');
    })
   };
 
@@ -39,8 +41,8 @@ export default function Login() {
   },[]);
   return (
     <div className="loginContainer">
-      <h2 className="appName">Movies</h2>
-      <h3 className="loginText">Login</h3>
+      <h1 className="appName">Movies</h1>
+      <h2 className="loginText1">Login</h2>
       <form className="loginForm" onSubmit={handleSubmit}>
         <div className="formGroup">
           <label htmlFor="email">Email</label>
@@ -61,6 +63,7 @@ export default function Login() {
             onChange={handlePasswordChange}
             required
           />
+        <h3 className={error ? 'errorshow' : 'errordontshow'}>{error}</h3>
         </div>
         <button type="submit" className="signInButton">Sign In</button>
       </form>

@@ -11,7 +11,7 @@ export default function Signup() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [user,setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
+  const [error, setError] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -21,6 +21,7 @@ export default function Signup() {
       alert('Verification email has been sent to your email address. When You Verify the email then you will redirected at your page');
     }).catch((error) => {
       console.error('Error creating user:', error);
+      setError('User Might be exist !');
     })
     .finally(() => {
       setIsLoading(false); 
@@ -29,12 +30,14 @@ export default function Signup() {
 
   useEffect(()=>{
     auth.onAuthStateChanged((userCred)=>{
-      const {email,emailVerified} = userCred;
-      console.log(user);
-      setUser({email,emailVerified});
-      document.cookie = `email=${email}; path=/;`;
-      if(emailVerified){
-        navigate('/');
+      if (userCred) {
+        const { email, emailVerified } = userCred;
+        console.log(user);
+        setUser({ email, emailVerified });
+        document.cookie = `email=${email}; path=/;`;
+        if (emailVerified) {
+          navigate('/');
+        }
       }
     })
   },[]);
@@ -76,6 +79,7 @@ export default function Signup() {
             required
             className="inputfields"
           />
+          <h3 className={error ? 'errorshow' : 'errordontshow'}>{error}</h3>
         </div>
         {isLoading ? ( 
           <div className="loadingAnimation"></div>

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../Component/Header";
-import { auth } from "../api/fiebase.config";
+import { auth} from "../api/fiebase.config";
 import { movies } from "../movies.js";
 import "../Style/Showmovies.css";
-import { Dot, Star } from "lucide-react";
+import { ArrowLeft, Dot, Star } from "lucide-react";
 export default function Showmovie() {
   const params = useParams();
   const [user, setUser] = useState(null);
   const [movie, setMovie] = useState(null);
+  const navigate = useNavigate();
+  
+
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -19,9 +22,8 @@ export default function Showmovie() {
     setMovie(foundMovie);
   }, [params.movieId]);
 
-
   const booktickets = () =>{
-    alert("Sorry Were are out of the service for sometimes");
+    navigate(`/bookmovie/${movie.imdbID}`);
   }
   return (
     <>
@@ -32,6 +34,7 @@ export default function Showmovie() {
           backgroundImage: `url(${movie.Images[0]})`
         }}></div>
           <div className="maindetails">
+          <ArrowLeft style={{color:'white' , margin:'20px 0px 0px 50px' , cursor:'pointer'}} onClick={()=>navigate(-1)}/>
             <div className="poster1">
               <img src={movie.Poster} alt="" className="imageposter" />
             </div>
