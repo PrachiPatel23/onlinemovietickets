@@ -6,6 +6,7 @@ import Showmovie from './Pages/Showmovie';
 import Booktickets from './Pages/Booktickets';
 import TheaterContextProvider from './api/theaterContextProvider';
 import Selectticktes from './Pages/Selectticktes';
+import Payment from './Pages/Payment';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/movies/:movieId" element={<Showmovie/>} />
         <Route path="/bookmovie/:movieId" element={<Booktickets/>} />
         <Route path="/selectticktes/:movieId" element={<Selectticktes/>} />
+        <Route path="/proceedtopay/:movieId" element={<Payment/>} />
       </Routes>
     </Router>
     </TheaterContextProvider>

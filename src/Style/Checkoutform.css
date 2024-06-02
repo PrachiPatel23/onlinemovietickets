@@ -1,0 +1,85 @@
+.mainPayment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formofpayment {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #6E56CF;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    background-color: white; 
+    margin-top: 100px;
+    padding: 20px 30px; 
+}
+
+.paynow{
+    border: 2px solid #6E56CF;
+    height: 40px;
+    font-size: medium;
+    cursor: pointer;
+    border-radius: 5px; 
+    background-color: transparent;
+    margin: 10px;
+    &:hover{
+        background-color: #6E56CF;
+        color: white;
+    }
+}
+
+
+.amounttext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 50px 0px 0px;
+    flex: 0 0 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.amounttext h1 {
+    font-size: 24px; 
+    letter-spacing: 3px;
+    font-weight: 400;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #6E56CF;
+}
+
+.amounttext h3 {
+    letter-spacing: 2px;
+    font-size: 18px; 
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.cinamaname {
+    color: #333; 
+}
+
+.totalamount {
+    background-color: #6E56CF;
+    color: white;
+    padding: 10px 20px 10px 20px;
+}
+
+.movieId {
+    color: #666; 
+}
+.arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+

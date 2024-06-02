@@ -11,7 +11,11 @@ export default function Showmovie() {
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
   
-
+  useEffect(()=>{
+    if(movie){
+      document.title = `${movie?.Title} - BookNow`
+    }
+  },[movie]);
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {

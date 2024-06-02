@@ -47,8 +47,8 @@
     margin: 20px;
   }
   .content{
-    width: 95%;
-    margin: 180px 0px 10px 0px;
+    width: 100%;
+    margin: 180px;
     background-color: white;
   }
   .movies{
@@ -59,41 +59,16 @@
     padding: 40px;
     border-bottom: 1px solid #dcdcdc;
     transition: all 0.5s ease;
-    cursor: pointer;
-    &:hover{
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+  }
+
+  .alldata{
+    flex: 0 0 75%;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
   }
   .theatername{
     color: #654DC4; 
-  }
-  .aviabledetails{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-  }
-
-  .aviabledetails li {
-    margin-left: 20px;
-    border: 1px solid #D4CAFE; 
-    background-color: #F4F0FE; 
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    color: #4e35b4; 
-    font-weight: 500;
-    border-radius: 10px;
-  }
-  
-  .aviabledetails li:hover {
-    background-color: #cbbefd; 
-    color: #FCFCFC;
-  }
-
-  .rightarrow{
-    color: #654DC4; 
-    cursor: pointer;
-    padding: 10px;
   }
   
   .text1{
@@ -102,4 +77,36 @@
     font-family: Arial, Helvetica, sans-serif;
     border-bottom: 1px solid #bdb6d5;
     padding: 20px;
+  }
+
+  .show{
+    padding: 10px;
+    border: 1px solid #bdb6d5;
+    cursor: pointer;
+    color: #4e35b4;
+    border-radius: 5px;
+    &:hover{
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  }
+  .hoverandshow{
+    display: none;
+  }
+  .hoverandshow1{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    z-index: 100;
+    background-color: white;
+    font-weight: 100;
+  }
+  
+  .datashow{
+    padding: 10px;
+    font-weight: 400;
+    color: #6b6b6b;
   }

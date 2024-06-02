@@ -11,6 +11,7 @@ export default function Homepage() {
   const [user,setUser] = useState(null);
 
   useEffect(()=>{
+    document.title = "Homepage - Movies"
    auth.onAuthStateChanged((user)=>{
     if(user){
       setUser(user);

@@ -1,6 +1,7 @@
 
 .data{
     margin-top: 150px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,10 +18,10 @@
 .seats {
     border: 1px solid #D4CAFE; 
     border-radius: 10px;
-    width: 70%; 
+    width: 40%; 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Adjust the minmax value to control the seat size */
-    gap: 10px; 
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
+    gap: 15px; 
     padding: 20px;
   background-color: #FCFCFC;
   margin-bottom: 10px;
@@ -28,20 +29,8 @@
 .text{
     color: #6E56CF;
 }
-.notselected{
-    margin: 0;
-    padding: 10px;
-    background-color: #F4F0FE; 
-    border: 1px solid #D4CAFE; 
-    border-radius: 4px;
-    text-align: center; 
-    font-weight: 500;
-    font-size: medium;
-    cursor: pointer;
-  }
-
 .selectseats{
-    width: 70%;
+    width: 45%;
     padding-left: 10px;
     display: flex;
     flex-direction: row;
@@ -72,6 +61,17 @@
     color: black;
 }
 
+.seat{
+    border: 1px solid #6E56CF;
+    color:rgb(101, 101, 101);
+    margin: 0;
+    padding: 10px; 
+    border-radius: 4px;
+    text-align: center; 
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+}
 .selected{
     background-color: #6E56CF;
     color: #F4F0FE;
@@ -83,10 +83,11 @@
     font-weight: 500;
     font-size: medium;
     cursor: pointer;
-}
+} 
 
 .continue{
     width: 200px;
+    align-self: flex-end;
     margin: 10px;
     padding: 10px;
     color: #6E56CF;
@@ -96,9 +97,83 @@
     background-color: #F4F0FE;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: all 0.5s ease;
     &:hover{
         background-color: #8a78d2;
         color: white;
     }
+}
+
+.screen{
+    width: 30%;
+    border-radius: 5px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalprice{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.summary{
+    font-family: system-ui, -apple-system;
+    font-weight: 500;
+    color: #6E56CF;
+    border-bottom: 1px solid #6E56CF;
+}
+.paymentsummary,.payableamount,.continuebutton{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.seatesandtheater,.totalpayment,.payableamounttext,.payableamountmoney{
+    font-size: large;
+    font-weight: 400;
+}
+.payableamount{
+    width: 40%;
+    margin-top: 50px;
+    background-color: #7864c8;
+    color: white;
+}
+
+.continuebutton{
+    margin-top: 30px;
+}
+.backbutton{
+    background-color: transparent;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+    &:hover{
+        color: #6E56CF;
+    }
+}
+
+.disabled{
+    background-color: #939393;
+    color: #F4F0FE;
+    margin: 0;
+    padding: 10px; 
+    border: 1px solid #D4CAFE; 
+    border-radius: 4px;
+    text-align: center; 
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
 }
